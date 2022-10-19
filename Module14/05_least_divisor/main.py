@@ -7,4 +7,4 @@ def gsd(number):
 number = int(input('Введите число: '))
 if number <= 1:
     number = int(input('Число должно быть больше 1. Введите число повторно: '))
-print(gsd(number))
+print('Наименьший делитель отличный от единицы: ', gsd(number))
