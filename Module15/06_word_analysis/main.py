@@ -1,9 +1,12 @@
-
-
+def count_letters():
+    count = 0
+    for sym in word:
+        if sym == letter:
+            count += 1
+    return(count)
 word = input('Введите слово: ')
-count = 0
+word_letters = []
 for letter in word:
-    for symbol in word:
-        if letter == symbol:
-            count +=1
-print(count)
+    if count_letters() == 1:
+        word_letters.append(letter)
+print('Количество уникальных букв: ', len(word_letters))
