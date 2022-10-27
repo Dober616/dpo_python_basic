@@ -6,8 +6,7 @@ def streamline():
                     my_list.insert(len(my_list)-1, i)
                     my_list.remove(i)
                 else:
-                    my_list.insert(i, y)
-                    my_list.remove(y)
+                    continue
     return my_list
 
 count_numm = int(input('Сколько чисел в списке: '))
