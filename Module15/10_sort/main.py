@@ -4,9 +4,7 @@ def streamline():
             for y in my_list:
                 if i > y:
                     my_list.insert(len(my_list)-1, i)
-
     return my_list
-
 count_numm = int(input('Сколько чисел в списке: '))
 my_list = []
 for _ in range(count_numm):
