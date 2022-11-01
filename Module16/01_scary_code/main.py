@@ -16,6 +16,6 @@ main_list = [1, 5, 3]
 first_minor_list = [1, 5, 1, 5]
 second_minor_list = [1, 3, 1, 5, 3, 3]
 
-print('Количество цифр 5 при первом объединении: ', count(5, first_minor_list))
-print('Количество цифр 3 при первом объединении: ', count(3, second_minor_list))
+print('Количество цифр 5 при первом объединении:', count(5, first_minor_list))
+print('Количество цифр 3 при первом объединении:', count(3, second_minor_list))
 print('Итоговый список: ', cut(5, first_minor_list))
