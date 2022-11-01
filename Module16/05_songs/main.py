@@ -1,3 +1,7 @@
+def playlist():
+    for i in violator_songs:
+        if i[0] == song:
+            return i[1]
 violator_songs = [
     ['World in My Eyes', 4.86],
     ['Sweetest Perfection', 4.43],
@@ -9,5 +13,11 @@ violator_songs = [
     ['Blue Dress', 4.29],
     ['Clean', 5.83]
 ]
-
-# TODO здесь писать код
+my_playlist = []
+duration = 0
+songs_count = int(input('Сколько песен выбрать?: '))
+for i in range (songs_count):
+    print('Название', i+1, 'песни: ', end='')
+    song = input()
+    duration += playlist()
+print('Общее время звучания песен: ', duration, 'минут')
