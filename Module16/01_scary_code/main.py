@@ -5,6 +5,8 @@ def count(x, num_list):
         if number == x:
             count += 1
     return count
+
+
 def cut(x, num_list):
     main_list.extend(num_list)
     for i in main_list:
