@@ -12,6 +12,7 @@ def cut(x, num_list):
             main_list.remove(i)
     return main_list
 
+
 main_list = [1, 5, 3]
 first_minor_list = [1, 5, 1, 5]
 second_minor_list = [1, 3, 1, 5, 3, 3]
