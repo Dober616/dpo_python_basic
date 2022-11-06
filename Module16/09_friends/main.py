@@ -7,6 +7,7 @@ def duti():
             ballance -= elements[2]
     return ballance
 
+
 friends_count = int(input('Количество друзей: '))
 duti_resceipt = int(input('Долговых расписок: '))
 duti_list = []
@@ -25,4 +26,3 @@ for i in range(duti_resceipt):
 print('Баланс друзей: ')
 for friend in range(friends_count):
     print(friend+1, ':', duti())
-
