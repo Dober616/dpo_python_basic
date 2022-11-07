@@ -18,7 +18,7 @@ print(sec_list)
 
 first_list.extend(sec_list)
 print(first_list)
-for i in range(1, len(first_list)//2):
+for i in range(1, len(first_list)):
     x = first_list[len(first_list)-i]
     for _ in range(first_list.count(x)-1):
         numm_remove(first_list)
