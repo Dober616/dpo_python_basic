@@ -21,4 +21,4 @@ for i in range(drop_count):
     print('Сбиты палки с номера ', Left_i, 'по номер ', Right_i)
 new_list = ['.' if i in drop_list else 'I' for i in my_list]
 
-print('Результат: ', new_list)
+print('Результат: ', ' '.join(new_list))
