@@ -1,5 +1,5 @@
 import itertools
-string = 'aaaaabbcaaA'  # input('Введите строку: ')
+string = input('Введите строку: ')
 new_string = []
 
 for litter, group in itertools.groupby(string):
