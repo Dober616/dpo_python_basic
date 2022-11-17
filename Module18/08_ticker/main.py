@@ -4,7 +4,7 @@ def new_string(temp_string, i):
 first_string = 'abcd'
 second_string = 'cdab'
 shift = 0
-for i in range(4):
+for i in range(len(first_string)):
     if first_string == new_string(second_string, i):
         print('Первая строка получается из второй со сдвигом', shift)
     else:
