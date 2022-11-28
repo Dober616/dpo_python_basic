@@ -9,5 +9,15 @@ violator_songs = {
     'Blue Dress': 4.29,
     'Clean': 5.83
 }
-
-# TODO здесь писать код
+songs = dict()
+songs_count = int(input('Сколько песен выбрать? '))
+song_list = []
+for i in range(songs_count):
+    print('Название', i + 1, '-й песни: ', end='')
+    song = input()
+    if song in violator_songs:
+        song_list.append(violator_songs.get(song))
+    else:
+        print('Ошибка, такой песни в списке нет.')
+print()
+print('Общее время звучания песен: ', sum(song_list), 'минуты')
