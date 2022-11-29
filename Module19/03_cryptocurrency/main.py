@@ -45,4 +45,4 @@ data = {
 }
 
 
-# TODO здесь писать код
+print('Cписок ключей', get.data.keys())
