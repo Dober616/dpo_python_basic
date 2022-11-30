@@ -1,6 +1,6 @@
 def dictionary():
     for symb in text:
-        if not symb in symb_list:
+        if symb not in symb_list:
             symb_list[symb] = 1
         else:
             symb_list[symb] += 1
@@ -18,4 +18,3 @@ for letter in symb_list.keys():
     new_dict[symb_list[letter]].append(letter)
 for count in new_dict:
     print(f'{count}: {new_dict[count]}')
-
