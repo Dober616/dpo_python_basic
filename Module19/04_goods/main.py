@@ -1,3 +1,17 @@
+def count_count(dictionary):
+    result = 0
+    for each_list in dictionary:
+        result += each_list['quantity']
+    return result
+
+
+def count_prices(dictionary):
+    result = 0
+    for each_list in dictionary:
+        result += each_list['price'] * each_list['quantity']
+    return result
+
+
 goods = {
     'Лампа': '12345',
     'Стол': '23456',
@@ -24,4 +38,6 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+
+for i in goods:
+    print(f'{i} - {count_count(store[goods[i]])} штук, стоимость {count_prices(store[goods[i]])} рубля')
