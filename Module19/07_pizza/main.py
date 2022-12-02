@@ -1,4 +1,4 @@
-count_orders = 3  # int(input('Введите количество заказов: '))
+count_orders = int(input('Введите количество заказов: '))
 client = dict()
 
 for i in range(count_orders):
@@ -8,15 +8,11 @@ for i in range(count_orders):
     if order[0] not in client.keys():
         client[order[0]] = pizza
     else:
-        if pizza != order[1]:
+        if order[1] not in client[order[0]]:
             client[order[0]].update(pizza)
         else:
-            !!!client[pizza] = client[pizza] + order[2]!!!
-
-            # как бы это блять сложить что-то скорее всего с .pop
-
-
+            client[order[0]][order[1]] = int(client[order[0]][order[1]]) + int(order[2])
+                # вроде как ошибка но вроде как работает
 
 for i in client:
     print(i, client[i])
-print(client.values())
