@@ -10,8 +10,12 @@ def dictionary():
 symb_list = dict()
 text = input('Введите текст: ')
 symb_list.update(dictionary())
-print('Инвертированный словарь частот: ')
 new_dict = dict()
+print(f'Оригинальный словарь частот: ')
+for key in symb_list.keys():
+    print(f'{key}: {symb_list[key]}')
+print('Инвертированный словарь частот: ')
+
 for i in set(symb_list.values()):
     new_dict[i] = []
 for letter in symb_list.keys():
