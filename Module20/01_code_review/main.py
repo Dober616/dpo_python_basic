@@ -1,3 +1,4 @@
+
 students = {
     1: {
         'name': 'Bob',
@@ -19,26 +20,45 @@ students = {
     }
 }
 
+ages = []
+interests = []
+len_surnames = 0
+for student in students:
+    age = (student, students[student]['age'])
+    ages.append(age)
 
-def f(dict):
-    lst = []
-    string = ''
-    for i in dict:
-        lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
+for student in students:
+    for interest in students[student]['interests']:
+        interests.append(interest)
+    for surname in students[student]['surname']:
+        len_surnames += len(surname)
+
+print(f'Список пар "ID студента - возраст": {ages}\n'
+    f'Полный список интересов всех студентов: {interests}\n'
+    f'Длина всех фамилий студентов: {len_surnames}\n'
+)
 
 
-pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
-
-
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
-
-# TODO исправить код
+#
+# def f(dict):
+#     lst = []
+#     string = ''
+#     for i in dict:
+#         lst += (dict[i]['interests'])
+#         string += dict[i]['surname']
+#     cnt = 0
+#     for s in string:
+#         cnt += 1
+#     return lst, cnt
+#
+#
+# pairs = []
+# for i in students:
+#     pairs += (i, students[i]['age'])
+#
+#
+# my_lst = f(students)[0]
+# l = f(students)[1]
+# print(my_lst, l)
+#
+#
