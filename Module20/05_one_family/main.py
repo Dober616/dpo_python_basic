@@ -11,7 +11,7 @@ family_dict = {
 age_list = []
 some_surname = input('Введите фамилию: ')
 for name in family_dict.keys():
-    if some_surname in name:
+    if some_surname.lower() in name.lower():
         age_list.append(name)
 
 for i in age_list:
