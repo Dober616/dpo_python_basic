@@ -1,6 +1,6 @@
 def sort_tupple():
     for numm in my_tupple:
-        if numm != int(numm):
+        if not isinstance(numm, int):
             return my_tupple
     return sorted(my_tupple)
 

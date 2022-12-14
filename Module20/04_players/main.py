@@ -4,10 +4,5 @@ players = {
     ("Rob", "Bobbin"): (12, 8, 2)
 }
 temp_tuple = ()
-result_list = []
-for player in players.keys():
-    temp_tuple = player + players[player]
-    result_list.append(temp_tuple)
-result_list = tuple(result_list)
-
+result_list = [player + players[player] for player in players.keys()]
 print(result_list)
