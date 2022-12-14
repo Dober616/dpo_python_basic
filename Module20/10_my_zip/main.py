@@ -1,16 +1,9 @@
-def my_zip():
-    result_line = []
-    if len(line_1) <= len(line_2):
-        short = len(line_1)
-    else:
-        short = len(line_2)
-    for i in range(short):
-        temp_tuple = line_1[i], line_2[i]
-        result_line.append(temp_tuple)
-    return result_line
+def min_len():
+    return min(len(my_string), len(my_tupple))
 
-line_1 = ('abcd')
-line_2 = (10, 20, 30, 40)
-for i in my_zip():
+my_string = 'qwer'
+my_tupple = (10, 20, 30, 40)
+
+new_tupple = ((my_string[i], my_tupple[i]) for i in range(min_len()))
+for i in new_tupple:
     print(i)
-
