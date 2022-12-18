@@ -1,11 +1,11 @@
-def none_cycle(some_numm):
-    if some_numm != 1:
-        none_cycle(some_numm - 1)
-    print(some_numm)
+def subsequence_nums(number):
+    if number == 0:
+        return 1
+    subsequence_nums(number - 1)
+    print(number)
 
 
+number = 10
 
-numm = int(input('Введите num: '))
-
-none_cycle(numm)
+subsequence_nums(number)
 
