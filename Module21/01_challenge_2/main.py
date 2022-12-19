@@ -5,7 +5,5 @@ def subsequence_nums(number):
     print(number)
 
 
-number = 10
-
+number = int(input('Ввведите num: '))
 subsequence_nums(number)
-
