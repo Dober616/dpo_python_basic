@@ -7,3 +7,13 @@ def calculating_math_func(data):
     return result
 
 # TODO оптимизировать функцию
+my_number = 5
+print(calculating_math_func(my_number))
+
+def new_function(data):
+    if data == 1:
+        return 1
+    return data * (new_function(data - 1))
+
+print((new_function(my_number) / my_number ** 3) ** 10)
+
