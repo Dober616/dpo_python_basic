@@ -1,13 +1,12 @@
-my_string = [{"x": 4}, "b", "z", "d"]
-my_tupple = (10, {20,}, [30], "z")
-def new_zip(frst_data, scnd_data, i, my_list=[]):
-    if i < 0:
-        return 0
-    temp_tuple = (frst_data[i], scnd_data[i])
-    new_zip(frst_data, scnd_data, i - 1)
-    my_list.append(temp_tuple)
-    return my_list
+def my_zip_2(*args):
+    min_len = min(list((len(data) for data in args)))
+    return [tuple(list(element)[index] for element in args) for index in range(min_len)]
 
 
-tuple_lenght = min(len(my_string), len(my_tupple))-1
-print(new_zip(my_string, my_tupple, tuple_lenght))
+a = [1, 2, 3, 4, 5]
+b = {1: "s", 2: "q", 3: 4}
+x = (1, 2, 3, 4, 5)
+
+print(my_zip_2(a, b, x))
+
+# только вот без циклов с аргами не получается
