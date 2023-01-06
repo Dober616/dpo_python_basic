@@ -17,7 +17,7 @@ def files_n_dirs(path):
     return files, dirs, files_size
 
 
-my_path = os.path.abspath(os.path.join('..', '..', 'Module22'))
+my_path = '/Users/druz_kirill/PycharmProjects/dpo_python_basic/Module22'
 
 print(f'Количество файлов: {files_n_dirs(my_path)[0]}')
 print(f'Количество папок: {files_n_dirs(my_path)[1]}')
