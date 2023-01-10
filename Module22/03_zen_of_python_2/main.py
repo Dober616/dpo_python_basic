@@ -25,7 +25,7 @@ def min_letter_count():
 
 zen_file = open('zen.txt', 'r')
 data = zen_file.read()
-alfabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alfabet = 'abcdefghijklmnopqrstuvwxyz'
 letters = 0
 words = 0
 strings = 0
