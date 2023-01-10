@@ -22,5 +22,7 @@ for i in sorted_values:
     for y in letter_dict.keys():
         if letter_dict[y] == i:
             sorted_dict[y] = letter_dict[y]
-            result.write(f'{y}=>{sorted_dict[y]}\n')
+            result.write(f'{y}: {sorted_dict[y]}\n')
 print(sorted_dict)
+war_file.close()
+result.close()
