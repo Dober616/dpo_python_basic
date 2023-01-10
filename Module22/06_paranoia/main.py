@@ -14,3 +14,6 @@ for string in read_data:
     write_data.write(''.join(encrypted_string))
     shift += 1
 
+read_data.close()
+write_data.close()
+
