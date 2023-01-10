@@ -4,11 +4,11 @@ def letters_count(letters):
             letters += 1
     return letters
 def words_count(words):
-    for word in data.split(' '):
+    for _ in data.split(' '):
         words += 1
     return words
 def strings_count(strings):
-    for string in data.split('\n'):
+    for _ in data.split('\n'):
         strings += 1
     return strings
 
