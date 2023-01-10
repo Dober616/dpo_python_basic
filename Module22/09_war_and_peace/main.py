@@ -24,8 +24,3 @@ for i in sorted_values:
             sorted_dict[y] = letter_dict[y]
             result.write(f'{y}=>{sorted_dict[y]}\n')
 print(sorted_dict)
-
-
-
-
-
