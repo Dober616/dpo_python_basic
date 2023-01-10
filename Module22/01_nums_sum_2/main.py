@@ -1,15 +1,12 @@
 initial_file = open('numbers.txt', 'r')
 data = initial_file.read()
-numbers_list = []
-for line in data:
-    for symbol in line:
-        if symbol.isdigit():
-            numbers_list.append(symbol)
-result = 0
-for digit in numbers_list:
-    result += int(digit)
-
 final_data = open('answer.txt', 'w')
-final_data.write(str(result))
+summ = 0
+for line in data.split('\n'):
+    for sym in line.split(' '):
+        if sym.isdigit():
+            summ += int(sym)
+
+final_data.write(str(summ))
 initial_file.close()
 final_data.close()
