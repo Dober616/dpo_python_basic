@@ -1,5 +1,4 @@
 import os
-import math
 
 letters = {}
 letters_frequency = {}
@@ -13,13 +12,14 @@ for string in original_file:
                 letters[letter.lower()] += 1
             else:
                 letters[letter.lower()] = 1
-print(letters)
 
 for letter in sorted(letters):
-    letters_frequency[letter] = round(letters[letter] / len(letters), 3)
+    letters_frequency[letter] = round(letters[letter] / sum(letters.values()), 3)
+    letters_frequency = dict(sorted(letters_frequency.items(), key=lambda item: item[1]))
 for element in letters_frequency:
     final_file.write(f'{element} {letters_frequency[element]}\n')
 original_file.close()
 final_file.close()
+
 
 # никак не могу понять как отсортировать по 2 параметрам
