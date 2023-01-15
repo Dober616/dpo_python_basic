@@ -7,12 +7,13 @@ try:
             lenght = len(name)
             if name.endswith('\n'):
                 lenght -= 1
-            if lenght < 3:
-                raise BaseException
+            try:
+                if lenght < 3:
+                    raise Exception('Слишком короткое имя')
+            except Exception:
+                print(f'Длина строки {string_count} меньше 3 букв')
             len_summ += lenght
 except FileNotFoundError:
     print('Такой файл не найден.')
-except BaseException:
-    print(f'Длина строки {string_count} меньше 3 букв')
 finally:
     print(f'Итоговая сумма символов: {len_summ}')

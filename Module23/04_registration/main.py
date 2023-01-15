@@ -8,12 +8,11 @@ def mail_check(mail):
     return None
 
 
-
 list_string = 0
 sum_1 = 0
 sum_2 = 0
 sum_3 = 0
-with open('registrations.txt', 'r') as protocol:
+with open('registrations.txt', 'r', encoding='utf8') as protocol:
     with open('registratioons_bed.txt', 'w') as bad_santa:
         for line in protocol:
             line_string = line.split(' ')
@@ -29,13 +28,11 @@ with open('registrations.txt', 'r') as protocol:
                     bad_santa.write(f'Запись № {list_string}. Ошибка в возрасте. {line}')
                     sum_3 += 1
             except IndexError:
-                bad_santa.write((f'Запись № {list_string}. Заполнены не все поля. {line}'))
+                bad_santa.write(f'Запись № {list_string}. Заполнены не все поля. {line}')
                 sum_3 += 1
             except ValueError:
-                bad_santa.write((f'Запись № {list_string} . Ошибка в возрасте. {line}'))
+                bad_santa.write(f'Запись № {list_string} . Ошибка в возрасте. {line}')
                 sum_3 += 1
-
-
 print(f'Ошибки в именах: {sum_1}')
 print(f'Ошибки в адресе: {sum_2}')
 print(f'Ошибки в возрасте:  {sum_3}')
