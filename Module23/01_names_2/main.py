@@ -9,8 +9,8 @@ try:
                 lenght -= 1
             try:
                 if lenght < 3:
-                    raise Exception('Слишком короткое имя')
-            except Exception:
+                    raise BaseException
+            except:
                 print(f'Длина строки {string_count} меньше 3 букв')
             len_summ += lenght
 except FileNotFoundError:
