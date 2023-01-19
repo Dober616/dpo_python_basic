@@ -34,6 +34,6 @@ def dots_line(crcl1, crcl2):
 
 my_circle = Circle()
 my_circle.info()
-new_circle = Circle('second', 4, 4, 1)
+new_circle = Circle('second', 4, 1, 1)
 new_circle.info()
 dots_line(my_circle, new_circle)
