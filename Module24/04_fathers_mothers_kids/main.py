@@ -1,3 +1,6 @@
+import random
+
+
 class Parents:
     def __init__(self, name, age, clildren):
         self.name = name
@@ -29,7 +32,6 @@ class Parents:
             print(f'Ребенок {child.name} то уже не ребенок')
 
 
-
 class Kid:
     def __init__(self, name, age, chill, hungry):
         self.name = name
@@ -43,7 +45,6 @@ class Kid:
               f'Cостояние спокойствия: {self.chill}\n'
               f'Состояние голода: {self.hungry}')
 
-import random
 
 parent = Parents(input('Имя родителя: '), int(input('Возраст: ')), clildren=[])
 child_1 = Kid(input('Имя ребенка: '), int(input('Возраст ребенка: ')), random.randint(0, 3), random.randint(1, 3))
