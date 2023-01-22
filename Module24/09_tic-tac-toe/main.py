@@ -5,14 +5,15 @@ class Board:
     for i in range(1, 10):
         cells[i] = ' '
 
-    def board_info(self):
-        for i in self.cells.keys():
-            print(i, self.cells[i])
-
-
-
 
 class Player:
+    def board_info(self):
+        print(f'{Board.cells[1]}|{Board.cells[2]}|{Board.cells[3]}\n'
+              f'__|__|__\n'
+              f'{Board.cells[4]}|{Board.cells[5]}|{Board.cells[6]}\n'
+              f'__|__|__\n'
+              f'{Board.cells[1]}|{Board.cells[2]}|{Board.cells[3]}\n')
+
     def __init__(self, name, symbol):
         self.name = name
         self.symbol = symbol
@@ -23,7 +24,11 @@ class Player:
         else:
             print('Ячейка занята')
             self.play_game()
-        print(Board.cells)
+        print(f' {Board.cells[1]} | {Board.cells[2]} | {Board.cells[3]} \n'
+              f'___|___|___\n'
+              f' {Board.cells[4]} | {Board.cells[5]} | {Board.cells[6]} \n'
+              f'___|___|___\n'
+              f' {Board.cells[7]} | {Board.cells[8]} | {Board.cells[9]} \n')
 
 
 
