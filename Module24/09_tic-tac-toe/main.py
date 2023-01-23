@@ -17,6 +17,7 @@ class Player:
     def __init__(self, name, symbol):
         self.name = name
         self.symbol = symbol
+
     def play_game(self):
         self.sell_choose = int(input(f'Куда ходим, {self.name}? '))
         if Board.cells[self.sell_choose] == ' ':
@@ -29,7 +30,6 @@ class Player:
               f' {Board.cells[4]} | {Board.cells[5]} | {Board.cells[6]} \n'
               f'___|___|___\n'
               f' {Board.cells[7]} | {Board.cells[8]} | {Board.cells[9]} \n')
-
 
 
 def rules():
@@ -50,7 +50,6 @@ def rules():
         return False
 
 
-
 egor = Player('Егор', 'X')
 serg = Player('Сергей', '0')
 while True:
@@ -59,12 +58,3 @@ while True:
         serg.play_game()
     else:
         break
-
-
-
-
-
-
-
-
-
