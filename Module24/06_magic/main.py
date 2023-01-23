@@ -1,11 +1,12 @@
 class Water:
     def __add__(self, other):
         if isinstance(other, Air):
-            return 'Шторм'
+            return Storm()
         elif isinstance(other, Fire):
-            return 'Пар'
+            return Stream()
         elif isinstance(other, Earth):
-            return 'Грязь'
+            return Grease()
+
     def __str__(self):
         return 'Вода'
 
@@ -13,11 +14,12 @@ class Water:
 class Air:
     def __add__(self, other):
         if isinstance(other, Fire):
-            return 'Молния'
+            return Ligtning()
         elif isinstance(other, Earth):
-            return 'Пыль'
+            return Dust()
         elif isinstance(other, Water):
-            return 'Шторм'
+            return Storm()
+
     def __str__(self):
         return 'Воздух'
 
@@ -25,7 +27,8 @@ class Air:
 class Fire:
     def __add__(self, other):
         if isinstance(other, Earth):
-            return 'Лава'
+            return Lava
+
     def __str__(self):
         return 'Огонь'
 
@@ -35,10 +38,47 @@ class Earth:
         return 'Земля'
 
 
+class Storm:
+    def __str__(self):
+        return 'Шторм'
+
+
+class Stream:
+    def __str__(self):
+        return 'Пар'
+
+
+class Grease:
+    def __str__(self):
+        return 'Грязь'
+
+
+class Ligtning:
+    def __str__(self):
+        return 'Молния'
+
+
+class Dust:
+    def __str__(self):
+        return 'Пыль'
+
+
+class Lava:
+    def __str__(self):
+        return 'Лава'
+
 
 water = Water()
 air = Air()
 earth = Earth()
 fire = Fire()
+storm = Storm()
+stream = Stream()
+grease = Grease()
+lightning = Ligtning()
+dust = Dust()
+lava = Lava()
 
-print(water + air)
+
+print(f'{air} + {water} = {air + water}')
+print(f'{air} + {fire} = {air + fire}')
