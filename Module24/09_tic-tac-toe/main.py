@@ -45,7 +45,7 @@ def rules():
     elif Board.cells[3] == Board.cells[6] == Board.cells[9] and Board.cells[3] != ' ':
         print(f'Победил {Board.cells[3]}')
         return False
-    elif Board.cells[7] == Board.cells[9] == Board.cells[9] and Board.cells[7] != ' ':
+    elif Board.cells[7] == Board.cells[8] == Board.cells[9] and Board.cells[7] != ' ':
         print(f'Победил {Board.cells[7]}')
         return False
 
