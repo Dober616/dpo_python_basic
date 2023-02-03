@@ -1,15 +1,16 @@
 import os
 
 
-def string_count():
-    count = 0
-    files = os.listdir()
-    for file in  files:
-        if file.rstrip('.py'):
-            with open(file, 'r') as my_file:
-                for line in my_file:
-                    count += 1
-        print(files)
-        return count
+def strings_count(path):
+    all_strings = 0
+    for dirpath, dirnames, filenames in os.walk(path):
+        for file in filenames:
+            if os.path.join(dirpath, file).endswith('.py'):
+                curr_file = open(os.path.join(dirpath, file), 'r')
+                for line in curr_file.readlines():
+                    if not (line == '\n'):
+                        all_strings += 1
+    return all_strings
 
-print(string_count())
+
+print(f'Количество строк кода в модуле: {strings_count("/Users/druz_kirill/PycharmProjects/Module26")}')
