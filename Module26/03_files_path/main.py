@@ -1,14 +1,14 @@
 import os
-def gen_file_path(folder, path):
-    if not path:
-        path = os.path.abspath(os.path.join(os.path.sep))
-        for i in os.listdir(path):
-            temp = os.path.abspath(os.path.join(path, i))
-            if os.path.isdir(temp) and i != folder:
-                gen_file_path(folder, path)
-            yield temp
-            if i == folder:
-                return
 
 
-ttt = gen_file_path(work, 'main.py')
+def find_file_path(path):
+    for dirpath, dirnames, filenames in os.walk(path):
+        for file in filenames:
+            if os.path.join(dirpath, file):
+                yield os.path.join(dirpath, file)
+            else:
+                find_file_path(file)
+
+path = '/Users/druz_kirill/PycharmProjects/dpo_python_basic/Module14'
+for i in find_file_path(path):
+    print(i)
