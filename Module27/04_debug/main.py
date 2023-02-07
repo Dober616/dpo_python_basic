@@ -1,1 +1,5 @@
-# TODO здесь писать код
+import filecmp
+
+
+def my_counter():
+    def wrapped_func(*args):
