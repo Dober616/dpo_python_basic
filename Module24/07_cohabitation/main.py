@@ -1,21 +1,22 @@
 import random
 
 class Inhabitant:
-    def __init__(self, name):
+    def __init__(self, name, living_house):
         self.name = name
+        self.living_house = living_house
         self.satiety = 50
 
 
     def eat(self):
-        if House.food >= 10:
+        if self.living_house.food >= 10:
             self.satiety += 10
             House.food -= 10
             print(f'Поели. Сытость {self.name} повысилась на 10 и стала равна {self.satiety}\n'
-                  f'А вот еды в доме осталось {House.food}')
+                  f'А вот еды в доме осталось {self.living_house.food}')
         elif House.food > 0:
             self.satiety += House.food
             House.food = 0
-            print(f'Поели. Сытость {self.name} повысилась на {House.food} и стала {self.satiety}\n'
+            print(f'Поели. Сытость {self.name} повысилась на {self.living_house.food} и стала {self.satiety}\n'
                   f'Зато продуктов больше не осталось.')
         else:
             print('Так нечего вам есть идите работайте.')
@@ -29,21 +30,21 @@ class Inhabitant:
 
     def shopping(self):
         if House.money >= 10:
-            House.food += 10
+            self.living_house.food += 10
             House.money -= 10
             print(f'Сходили в магазин и купили продуктов. Денег стало на 10 меньше и стало {House.money}\n'
-                f'Зато еды в доме прибавилось и стало {House.food}')
+                f'Зато еды в доме прибавилось и стало {self.living_house.food}')
         elif House.money > 0:
-            House.food += House.money
+            self.living_house.food += House.money
             House.money -= House.money
-            print(f'Сходили в магазин и купили {House.food} продуктов. Денег больше не осталось.')
+            print(f'Сходили в магазин и купили {self.living_house.food} продуктов. Денег больше не осталось.')
         else:
             print('Так не на что в магазин идти, иди работай')
 
     def actions(self):
         if self.satiety < 20:
             self.eat()
-        elif House.food < 10:
+        elif self.living_house.food < 10:
             self.shopping()
         elif House.money < 50:
             self.work()
@@ -60,8 +61,8 @@ class House:
     money = 0
 
 
-max = Inhabitant('Максим')
-molly = Inhabitant('Молли')
+max = Inhabitant('Максим', 'My_house')
+molly = Inhabitant('Молли', 'My_house')
 for day in range(365):
     print(f'День {day + 1}')
     max.actions()
@@ -72,4 +73,3 @@ for day in range(365):
     if molly.satiety < 0:
         print(f'Игра окончена, {molly.name} умерла')
         break
-
