@@ -4,7 +4,7 @@ import functools
 def debug(func):
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs):
-        print(f'Вызывается: {func.__name__}{args})\n'
+        print(f'Вызывается: {func.__name__}{args}\n'
               f'{func.__name__} вернула значение {repr(func(*args))}')
         print(func(*args, **kwargs))
     return wrapped_func
