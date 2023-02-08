@@ -4,8 +4,8 @@ import functools
 def debug(func):
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs):
-        print(f'Вызывается: {func.__name__}{args}\n'
-              f'{func.__name__} вернула значение {repr(func(*args))}')
+        print(f'Вызывается: {func.__name__}{args}{kwargs}\n'
+              f'{func.__name__} вернула значение {repr(func(*args, **kwargs))}')
         print(func(*args, **kwargs))
     return wrapped_func
 
@@ -20,4 +20,4 @@ def greeting(name, age=None):
 
 greeting('Кирилл', 38)
 greeting('Егор')
-greeting('Катя', 16)
+greeting(name='Катя', age=16)
