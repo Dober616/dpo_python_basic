@@ -1,25 +1,34 @@
+import math
+
+
 class MyMath:
-    def __init__(self, a, b):
-        self.a(a)
-        self.b(b)
+    @staticmethod
+    def summ(a, b):
+        return a + b
 
-    @property
-    def a(self):
-        return self.a
+    @staticmethod
+    def round_length(radius):
+        print('Длина окружности: ', end='')
+        return 2 * math.pi * radius
 
-    @a.setter
-    def a(self, a):
-        self.a = a
+    @staticmethod
+    def round_square(radius):
+        print('Площадь круга: ', end='')
+        return math.pi * radius**2
 
-    @property
-    def b(self):
-        return self.b
+    @staticmethod
+    def cube_volume(side):
+        print('Объем круга: ', end='')
+        return side**3
 
-    @b.setter
-    def b(self, b):
-        self.b = b
+    @staticmethod
+    def sphere_surface(radius):
+        print('Площадь поверхности сферы: ', end='')
+        return 4 * math.pi * radius**2
 
-    def summ(self):
-        return self.a() + self.b()
 
-res = MyMath.summ(4, 4)
+print(MyMath.summ(5, 6))
+print(MyMath.round_length(radius=3))
+print(MyMath.round_square(radius=3))
+print(MyMath.cube_volume(4))
+print(MyMath.sphere_surface(3))
